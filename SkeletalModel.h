@@ -63,10 +63,12 @@ void drawSkeleton_recur(Joint* joint);
 	// world-space to joint space in the BIND POSE.
 	void computeBindWorldToJointTransforms();
 
+	void computeBindWorldToJointTransforms_recur(Joint* joint);
+
 	// 2.3.2. Implement this method to compute a per-joint transform from
 	// joint space to world space in the CURRENT POSE.
 	void updateCurrentJointToWorldTransforms();
-
+	void updateCurrentJointToWorldTransforms_recur(Joint* joint);	
 	// 2.3.2. This is the core of SSD.
 	// Implement this method to update the vertices of the mesh
 	// given the current state of the skeleton.
